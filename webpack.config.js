@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
+const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -22,6 +24,13 @@ module.exports = {
             loader: "css-loader",
           },
         ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'img/[name][ext]',
+        },
       },
     ],
   },
@@ -51,11 +60,15 @@ module.exports = {
   },
   resolve: {
     extensions: ["*", ".js", ".jsx"],
+    alias: {
+      assets: path.resolve(__dirname, 'assets'),
+    },
   },
   output: {
-    path: __dirname + "/dist",
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.[name].[contenthash].js",
     clean: true,
+    publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -69,8 +82,20 @@ module.exports = {
       threshold: 10240,
       minRatio: 0.8,
     }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { 
+          from: "assets/img", 
+          to: "img" 
+        }
+      ],
+    }),
   ],
   devServer: {
     hot: true,
+    static: {
+      directory: path.join(__dirname, 'dist'),
+      publicPath: '/',
+    },
   },
 };

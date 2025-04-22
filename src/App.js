@@ -49,11 +49,20 @@ const Story2 = ({ action, isPaused }) => {
 };
 
 const stories2 = [
+  // {
+  //   url: "./img/evelina-friman-hw_sKmjb0ns-unsplash.jpg",
+  // },
+  // {
+  //   url: "./img/jeremy-wong-weddings-K8KiCHh4WU4-unsplash",
+  // },
+  // {
+  //   url: "./img/ksav-pun-EHAn0csi6-E-unsplash.jpg",
+  // },
   {
     content: ({ action, isPaused }) => {
       return (
         <div style={contentStyle}>
-          <h1>The new version is here.</h1>
+          {/* <h1>The new version is here.</h1>
           <p>This is the new story.</p>
           <p>Now render React components right into your stories.</p>
           <p>Possibilities are endless, like here - here's a code block!</p>
@@ -61,10 +70,10 @@ const stories2 = [
             <code style={code}>console.log('Hello, world!')</code>
           </pre>
           <p>Or here, an image!</p>
-          <br />
+          <br /> */}
           <img
             style={image}
-            src="https://images.unsplash.com/photo-1565506737357-af89222625ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+            src="/img/elvis-bekmanis-WJc87MVcDaA-unsplash.jpg"
           ></img>
           <h3>Perfect. But there's more! →</h3>
         </div>
@@ -135,15 +144,6 @@ const stories2 = [
     content: Story2,
   },
   {
-    url: "https://plus.unsplash.com/premium_photo-1676231417481-5eae894e7f68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1676321626679-2513969695d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1676359912443-1bf438548584?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-  },
-  {
     url: "https://images.unsplash.com/photo-1676316698468-a907099ad5bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
     preloadResource: false,
   },
@@ -159,8 +159,13 @@ const stories2 = [
 
 const image = {
   display: "block",
-  maxWidth: "100%",
-  borderRadius: 4,
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  objectPosition: "center",
+  borderRadius: 0,
+  margin: 0,
+  padding: 0
 };
 
 const code = {
