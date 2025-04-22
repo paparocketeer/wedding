@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -74,6 +78,10 @@ button:focus-visible {
   width: 50vw !important;
   height: 100vh !important;
   background-color: #000;
+}
+
+.stories-container > div div {
+  /* padding: 0 !important; */
 }
 
 @media (max-width: 768px) {

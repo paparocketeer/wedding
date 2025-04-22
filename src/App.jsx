@@ -1,202 +1,125 @@
-//import "./styles.css";
-
 import React from "react";
 import Stories, { WithSeeMore } from "react-insta-stories";
-
-// Import images
-import profileImage from "assets/img/elvis-bekmanis-WJc87MVcDaA-unsplash.jpg";
-import locationJourneyImage from "assets/img/evelina-friman-hw_sKmjb0ns-unsplash.jpg";
+import { TextAnimate } from "./text-animate.tsx";
 
 class App extends React.Component {
   render() {
     return (
-        <div className="stories-container">
-          <Stories
-            loop
-            width={'auto'}
-            height={'auto'}
-            keyboardNavigation
-            defaultInterval={3000}
-            stories={stories2}
-            onStoryEnd={(s, st) => console.log("story ended", s, st)}
-            onAllStoriesEnd={(s, st) => console.log("all stories ended", s, st)}
-            onStoryStart={(s, st) => console.log("story started", s, st)}
-          />
-        </div>
+      <div className="stories-container">
+        <Stories
+          loop
+          width={'100vw'}
+          height={'100vh'}
+          keyboardNavigation
+          defaultInterval={3000}
+          stories={slides}
+          onStoryEnd={(s, st) => console.log("story ended", s, st)}
+          onAllStoriesEnd={(s, st) => console.log("all stories ended", s, st)}
+          onStoryStart={(s, st) => console.log("story started", s, st)}
+        />
+      </div>
     );
   }
 }
 
-const Story2 = ({ action, isPaused }) => {
-  return (
-    <div
-      style={{ ...contentStyle, background: "Aquamarine", color: "#16161d" }}
-    >
-      <h1>Hope you like shivam's story 😄.</h1>
-      {/* <p>
-        Render your custom JSX by passing just a{" "}
-        <code style={{ fontStyle: "italic" }}>content</code> property inside
-        your story object.
-      </p> */}
-      {/* <p>
-        You get a <code style={{ fontStyle: "italic" }}>action</code> prop as an
-        input to your content function, that can be used to play or pause the
-        story.
-      </p> */}
-      {/* <h1>{isPaused ? "Paused" : "Playing"}</h1> */}
-      <h4>
-        Wanna create journey stories like these. <br /> Download cube stop
-        travel app 🎉
-      </h4>
-      {/* <p>React Native version coming soon.</p> */}
-    </div>
-  );
-};
-
-const stories2 = [
+const slides = [
   {
-    content: ({ action, isPaused }) => {
+    content: () => {
       return (
-        <div style={contentStyle}>
-          <h1>Hey All 👋</h1>
-          <h1>Check shivam's journey story.</h1>
-
-          {/* <pre>
-            <code style={code}>here they are 😄 -></code>
-          </pre> */}
-          <img
-            style={image}
-            src={profileImage}
-            alt="Profile"
-          ></img>
-          <h4>stories creted by Cubestop travel app</h4>
+        <div className="relative w-full h-full overflow-hidden">
+          <img src={'assets/img/elvis-bekmanis-WJc87MVcDaA-unsplash.jpg'} alt="Background" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 flex flex-col justify-center items-center z-20 text-center p-5">
+            {/* <h1 className="text-4xl font-bold text-white mb-3 drop-shadow-lg">Welcome</h1> */}
+            <TextAnimate text="Welcome" type="rollIn" className="text-4xl font-bold text-white mb-3 drop-shadow-lg" />
+            <p className="text-2xl text-white drop-shadow-md">Our Wedding Story</p>
+          </div>
         </div>
       );
     }
   },
   {
-    content: ({ action, story }) => {
+    content: () => {
       return (
-        <WithSeeMore story={story} action={action}>
-          <div style={{ background: "pink", padding: 20 }}>
-            <h1 style={{ marginTop: "100%", marginBottom: 0 }}>🌝</h1>
-            <h1 style={{ marginTop: 5 }}>
-              Here is the location journey story created for the shivam's
-              journey.
-            </h1>
+        <div className="relative w-full h-full overflow-hidden">
+          <img src={'assets/img/evelina-friman-hw_sKmjb0ns-unsplash.jpg'} alt="Background" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 flex flex-col justify-center items-center z-20 text-center p-5">
+            <h1 className="text-4xl font-bold text-white mb-3 drop-shadow-lg">Welcome</h1>
+            <p className="text-2xl text-white drop-shadow-md">Our Wedding Story</p>
           </div>
-        </WithSeeMore>
+        </div>
       );
-    },
-    seeMoreCollapsed: ({ toggleMore, action }) => (
-      <p style={customSeeMore} onClick={() => toggleMore(true)}>
-        A custom See More message →
-      </p>
-    ),
-    seeMore: ({ close }) => (
-      <div
-        style={{
-          maxWidth: "100%",
-          height: "100%",
-          padding: 40,
-          background: "white"
-        }}
-      >
-        <h2>Just checking the see more feature.</h2>
-        <p style={{ textDecoration: "underline" }} onClick={close}>
-          Go on, close this popup.
-        </p>
-      </div>
-    ),
-    duration: 1000
+    }
   },
   {
-    content: ({ action, isPaused }) => {
+    content: () => {
       return (
-        <div style={contentStylestoryback}>
-          <img style={image} src={locationJourneyImage} alt="Location journey"></img>
+        <div className="relative w-full h-full overflow-hidden">
+          <img src={'assets/img/jeremy-wong-weddings-K8KiCHh4WU4-unsplash.jpg'} alt="Background" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 flex flex-col justify-center items-center z-20 text-center p-5">
+            <h1 className="text-4xl font-bold text-white mb-3 drop-shadow-lg">Welcome</h1>
+            <p className="text-2xl text-white drop-shadow-md">Our Wedding Story</p>
+          </div>
+        </div>
+      );
+    }
+  },
+  {
+    content: () => {
+      return (
+        <div className="relative w-full h-full overflow-hidden">
+          <img src={'assets/img/ksav-pun-EHAn0csi6-E-unsplash.jpg'} alt="Background" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 flex flex-col justify-center items-center z-20 text-center p-5">
+            <h1 className="text-4xl font-bold text-white mb-3 drop-shadow-lg">Welcome</h1>
+            <p className="text-2xl text-white drop-shadow-md">Our Wedding Story</p>
+          </div>
         </div>
       );
     }
   },
   // {
-  //   content: ({ action, isPaused }) => {
+  //   content: ({ action, story }) => {
   //     return (
-  //       <div style={contentStylestoryback}>
-  //         <img
-  //           style={image}
-  //           src="https://downloadwap.com/thumbs2/wallpapers/p2/2019/nature/48/c62b256713551358.jpg"
-  //         ></img>
+  //       <WithSeeMore story={story} action={action}>
+  //         <div className="bg-pink-300 p-5 h-full">
+  //           <h1 className="mt-[100%] mb-0 text-3xl">🌝</h1>
+  //           <h1 className="mt-2 text-2xl">
+  //             Join us on our special day
+  //           </h1>
+  //         </div>
+  //       </WithSeeMore>
+  //     );
+  //   },
+  //   seeMoreCollapsed: ({ toggleMore }) => (
+  //     <p className="text-center text-sm relative bottom-5" onClick={() => toggleMore(true)}>
+  //       See details →
+  //     </p>
+  //   ),
+  //   seeMore: ({ close }) => (
+  //     <div className="w-full h-full p-10 bg-white">
+  //       <h2 className="text-2xl mb-4">Wedding Details</h2>
+  //       <p className="underline cursor-pointer" onClick={close}>
+  //         Back to story
+  //       </p>
+  //     </div>
+  //   ),
+  //   duration: 1000
+  // },
+  // {
+  //   content: () => {
+  //     return (
+  //       <div className="bg-black w-full h-full p-5 flex items-center justify-center">
+  //         <img 
+  //           className="block w-full h-full object-contain object-top rounded-none" 
+  //           src={locationJourneyImage} 
+  //           alt="Location journey"
+  //         />
   //       </div>
   //     );
   //   }
   // },
-
   // {
-  //   url: "https://picsum.photos/1080/1920"
-  //   seeMore: ({ close }) => (
-  //     <div
-  //       style={{
-  //         maxWidth: "100%",
-  //         height: "100%",
-  //         padding: 40,
-  //         background: "white"
-  //       }}
-  //     >
-  //       <h2>Just checking the see more feature.</h2>
-  //       <p style={{ textDecoration: "underline" }} onClick={close}>
-  //         Go on, close this popup.
-  //       </p>
-  //     </div>
-  //   )
-  // },
-  // {
-  //   url:
-  //     "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-  //   type: "video"
-  // },
-  {
-    content: Story2
-  }
+  //   content: Story2
+  // }
 ];
-
-const image = {
-  display: "block",
-  width: "100%",
-  height: "100%",
-  objectFit: "cover",
-  objectPosition: "top",
-  borderRadius: 0,
-  margin: 0,
-  padding: 0
-};
-
-const contentStylestoryback = {
-  background: "black",
-  width: "100%",
-  padding: 20,
-  color: "white"
-};
-
-const code = {
-  background: "#eee",
-  padding: "5px 10px",
-  borderRadius: "4px",
-  color: "#333"
-};
-
-const contentStyle = {
-  background: "salmon",
-  width: "100%",
-  padding: 20,
-  color: "white"
-};
-
-const customSeeMore = {
-  textAlign: "center",
-  fontSize: 14,
-  bottom: 20,
-  position: "relative"
-};
 
 export default App;
