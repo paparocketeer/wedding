@@ -71,7 +71,7 @@ button:focus-visible {
 
 .stories-container > div {
   margin-left: 25%;
-  width: 50% !important;
+  width: 50vw !important;
   height: 100vh !important;
   background-color: #000;
 }

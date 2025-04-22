@@ -13,8 +13,8 @@ class App extends React.Component {
         <div className="stories-container">
           <Stories
             loop
-            width={'inherit'}
-            height={'inherit'}
+            width={'auto'}
+            height={'auto'}
             keyboardNavigation
             defaultInterval={3000}
             stories={stories2}
@@ -165,7 +165,7 @@ const image = {
   width: "100%",
   height: "100%",
   objectFit: "cover",
-  objectPosition: "center",
+  objectPosition: "top",
   borderRadius: 0,
   margin: 0,
   padding: 0
