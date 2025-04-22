@@ -1,7 +1,6 @@
 //import "./styles.css";
 
 import React from "react";
-import "./App.css";
 import Stories, { WithSeeMore } from "react-insta-stories";
 
 // Import images
@@ -11,16 +10,19 @@ import locationJourneyImage from "assets/img/evelina-friman-hw_sKmjb0ns-unsplash
 class App extends React.Component {
   render() {
     return (
-        <Stories
-          className="stories"
-          loop
-          keyboardNavigation
-          defaultInterval={3000}
-          stories={stories2}
-          onStoryEnd={(s, st) => console.log("story ended", s, st)}
-          onAllStoriesEnd={(s, st) => console.log("all stories ended", s, st)}
-          onStoryStart={(s, st) => console.log("story started", s, st)}
-        />
+        <div className="stories-container">
+          <Stories
+            loop
+            width={'inherit'}
+            height={'inherit'}
+            keyboardNavigation
+            defaultInterval={3000}
+            stories={stories2}
+            onStoryEnd={(s, st) => console.log("story ended", s, st)}
+            onAllStoriesEnd={(s, st) => console.log("all stories ended", s, st)}
+            onStoryStart={(s, st) => console.log("story started", s, st)}
+          />
+        </div>
     );
   }
 }
