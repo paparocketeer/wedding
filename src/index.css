@@ -65,6 +65,10 @@ button:focus-visible {
   }
 }
 
+.stories-container {
+  overflow: hidden;
+}
+
 .stories-container > div {
   margin-left: 25%;
   width: 50% !important;
