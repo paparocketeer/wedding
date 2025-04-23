@@ -8,14 +8,14 @@ class App extends React.Component {
       <div className="stories-container">
         <Stories
           loop
-          width={'100vw'}
+          width={'inherit'}
           height={'100vh'}
           keyboardNavigation
-          defaultInterval={3000}
+          defaultInterval={6000}
           stories={slides}
-          onStoryEnd={(s, st) => console.log("story ended", s, st)}
-          onAllStoriesEnd={(s, st) => console.log("all stories ended", s, st)}
-          onStoryStart={(s, st) => console.log("story started", s, st)}
+          // onStoryEnd={(s, st) => console.log("story ended", s, st)}
+          // onAllStoriesEnd={(s, st) => console.log("all stories ended", s, st)}
+          // onStoryStart={(s, st) => console.log("story started", s, st)}
         />
       </div>
     );
@@ -27,12 +27,7 @@ const slides = [
     content: () => {
       return (
         <div className="relative w-full h-full overflow-hidden">
-          <img src={'assets/img/elvis-bekmanis-WJc87MVcDaA-unsplash.jpg'} alt="Background" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 flex flex-col justify-center items-center z-20 text-center p-5">
-            {/* <h1 className="text-4xl font-bold text-white mb-3 drop-shadow-lg">Welcome</h1> */}
-            <TextAnimate text="Welcome" type="rollIn" className="text-4xl font-bold text-white mb-3 drop-shadow-lg" />
-            <p className="text-2xl text-white drop-shadow-md">Our Wedding Story</p>
-          </div>
+          <img src={'assets/img/template/1.png'} alt="Background" className="w-full h-full object-cover" />
         </div>
       );
     }
@@ -41,11 +36,7 @@ const slides = [
     content: () => {
       return (
         <div className="relative w-full h-full overflow-hidden">
-          <img src={'assets/img/evelina-friman-hw_sKmjb0ns-unsplash.jpg'} alt="Background" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 flex flex-col justify-center items-center z-20 text-center p-5">
-            <h1 className="text-4xl font-bold text-white mb-3 drop-shadow-lg">Welcome</h1>
-            <p className="text-2xl text-white drop-shadow-md">Our Wedding Story</p>
-          </div>
+          <img src={'assets/img/template/2.png'} alt="Background" className="w-full h-full object-cover" />
         </div>
       );
     }
@@ -54,11 +45,7 @@ const slides = [
     content: () => {
       return (
         <div className="relative w-full h-full overflow-hidden">
-          <img src={'assets/img/jeremy-wong-weddings-K8KiCHh4WU4-unsplash.jpg'} alt="Background" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 flex flex-col justify-center items-center z-20 text-center p-5">
-            <h1 className="text-4xl font-bold text-white mb-3 drop-shadow-lg">Welcome</h1>
-            <p className="text-2xl text-white drop-shadow-md">Our Wedding Story</p>
-          </div>
+          <img src={'assets/img/template/3.png'} alt="Background" className="w-full h-full object-cover" />
         </div>
       );
     }
@@ -67,15 +54,109 @@ const slides = [
     content: () => {
       return (
         <div className="relative w-full h-full overflow-hidden">
-          <img src={'assets/img/ksav-pun-EHAn0csi6-E-unsplash.jpg'} alt="Background" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 flex flex-col justify-center items-center z-20 text-center p-5">
-            <h1 className="text-4xl font-bold text-white mb-3 drop-shadow-lg">Welcome</h1>
-            <p className="text-2xl text-white drop-shadow-md">Our Wedding Story</p>
-          </div>
+          <img src={'assets/img/template/4.png'} alt="Background" className="w-full h-full object-cover" />
         </div>
       );
     }
   },
+  {
+    content: () => {
+      return (
+        <div className="relative w-full h-full overflow-hidden">
+          <img src={'assets/img/template/5.png'} alt="Background" className="w-full h-full object-cover" />
+        </div>
+      );
+    }
+  },
+  {
+    content: () => {
+      return (
+        <div className="relative w-full h-full overflow-hidden">
+          <img src={'assets/img/template/6.png'} alt="Background" className="w-full h-full object-cover" />
+        </div>
+      );
+    }
+  },
+  {
+    content: () => {
+      return (
+        <div className="relative w-full h-full overflow-hidden">
+          <img src={'assets/img/template/7.png'} alt="Background" className="w-full h-full object-cover" />
+        </div>
+      );
+    }
+  },
+  {
+    content: () => {
+      return (
+        <div className="relative w-full h-full overflow-hidden">
+          <img src={'assets/img/template/8.png'} alt="Background" className="w-full h-full object-cover" />
+        </div>
+      );
+    }
+  },
+  {
+    content: () => {
+      return (
+        <div className="relative w-full h-full overflow-hidden">
+          <img src={'assets/img/template/9.png'} alt="Background" className="w-full h-full object-cover" />
+        </div>
+      );
+    }
+  },
+  // {
+  //   content: () => {
+  //     return (
+  //       <div className="relative w-full h-full overflow-hidden">
+  //         <img src={'assets/img/elvis-bekmanis-WJc87MVcDaA-unsplash.jpg'} alt="Background" className="w-full h-full object-cover" />
+  //         <div className="absolute inset-0 flex flex-col justify-center items-center z-20 text-center p-5">
+  //           {/* <h1 className="text-4xl font-bold text-white mb-3 drop-shadow-lg">Welcome</h1> */}
+  //           <TextAnimate text="Welcome" type="rollIn" className="text-4xl font-bold text-white mb-3 drop-shadow-lg" />
+  //           <p className="text-2xl text-white drop-shadow-md">Our Wedding Story</p>
+  //         </div>
+  //       </div>
+  //     );
+  //   }
+  // },
+  // {
+  //   content: () => {
+  //     return (
+  //       <div className="relative w-full h-full overflow-hidden">
+  //         <img src={'assets/img/evelina-friman-hw_sKmjb0ns-unsplash.jpg'} alt="Background" className="w-full h-full object-cover" />
+  //         <div className="absolute inset-0 flex flex-col justify-center items-center z-20 text-center p-5">
+  //           <h1 className="text-4xl font-bold text-white mb-3 drop-shadow-lg">Welcome</h1>
+  //           <p className="text-2xl text-white drop-shadow-md">Our Wedding Story</p>
+  //         </div>
+  //       </div>
+  //     );
+  //   }
+  // },
+  // {
+  //   content: () => {
+  //     return (
+  //       <div className="relative w-full h-full overflow-hidden">
+  //         <img src={'assets/img/jeremy-wong-weddings-K8KiCHh4WU4-unsplash.jpg'} alt="Background" className="w-full h-full object-cover" />
+  //         <div className="absolute inset-0 flex flex-col justify-center items-center z-20 text-center p-5">
+  //           <h1 className="text-4xl font-bold text-white mb-3 drop-shadow-lg">Welcome</h1>
+  //           <p className="text-2xl text-white drop-shadow-md">Our Wedding Story</p>
+  //         </div>
+  //       </div>
+  //     );
+  //   }
+  // },
+  // {
+  //   content: () => {
+  //     return (
+  //       <div className="relative w-full h-full overflow-hidden">
+  //         <img src={'assets/img/ksav-pun-EHAn0csi6-E-unsplash.jpg'} alt="Background" className="w-full h-full object-cover" />
+  //         <div className="absolute inset-0 flex flex-col justify-center items-center z-20 text-center p-5">
+  //           <h1 className="text-4xl font-bold text-white mb-3 drop-shadow-lg">Welcome</h1>
+  //           <p className="text-2xl text-white drop-shadow-md">Our Wedding Story</p>
+  //         </div>
+  //       </div>
+  //     );
+  //   }
+  // },
   // {
   //   content: ({ action, story }) => {
   //     return (
