@@ -27,7 +27,7 @@ const slides = [
     content: () => {
       return (
         <div className="relative w-full h-full overflow-hidden">
-          <img src={'assets/img/1.png'} alt="Background" className="w-full h-full object-cover" />
+          <img src="/assets/img/1.png" alt="Background" className="w-full h-full object-cover" />
         </div>
       );
     }
@@ -36,7 +36,7 @@ const slides = [
     content: () => {
       return (
         <div className="relative w-full h-full overflow-hidden">
-          <img src={'assets/img/2.png'} alt="Background" className="w-full h-full object-cover" />
+          <img src="/assets/img/2.png" alt="Background" className="w-full h-full object-cover" />
         </div>
       );
     }
@@ -45,7 +45,7 @@ const slides = [
     content: () => {
       return (
         <div className="relative w-full h-full overflow-hidden">
-          <img src={'assets/img/3.png'} alt="Background" className="w-full h-full object-cover" />
+          <img src="/assets/img/3.png" alt="Background" className="w-full h-full object-cover" />
         </div>
       );
     }
@@ -54,7 +54,7 @@ const slides = [
     content: () => {
       return (
         <div className="relative w-full h-full overflow-hidden">
-          <img src={'assets/img/4.png'} alt="Background" className="w-full h-full object-cover" />
+          <img src="/assets/img/4.png" alt="Background" className="w-full h-full object-cover" />
         </div>
       );
     }
@@ -63,7 +63,7 @@ const slides = [
     content: () => {
       return (
         <div className="relative w-full h-full overflow-hidden">
-          <img src={'assets/img/5.png'} alt="Background" className="w-full h-full object-cover" />
+          <img src="/assets/img/5.png" alt="Background" className="w-full h-full object-cover" />
         </div>
       );
     }
@@ -72,7 +72,7 @@ const slides = [
     content: () => {
       return (
         <div className="relative w-full h-full overflow-hidden">
-          <img src={'assets/img/6.png'} alt="Background" className="w-full h-full object-cover" />
+          <img src="/assets/img/6.png" alt="Background" className="w-full h-full object-cover" />
         </div>
       );
     }
@@ -81,7 +81,7 @@ const slides = [
     content: () => {
       return (
         <div className="relative w-full h-full overflow-hidden">
-          <img src={'assets/img/7.png'} alt="Background" className="w-full h-full object-cover" />
+          <img src="/assets/img/7.png" alt="Background" className="w-full h-full object-cover" />
         </div>
       );
     }
@@ -90,7 +90,7 @@ const slides = [
     content: () => {
       return (
         <div className="relative w-full h-full overflow-hidden">
-          <img src={'assets/img/8.png'} alt="Background" className="w-full h-full object-cover" />
+          <img src="/assets/img/8.png" alt="Background" className="w-full h-full object-cover" />
         </div>
       );
     }
@@ -99,7 +99,7 @@ const slides = [
     content: () => {
       return (
         <div className="relative w-full h-full overflow-hidden">
-          <img src={'assets/img/9.png'} alt="Background" className="w-full h-full object-cover" />
+          <img src="/assets/img/9.png" alt="Background" className="w-full h-full object-cover" />
         </div>
       );
     }

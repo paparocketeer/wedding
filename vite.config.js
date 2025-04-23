@@ -19,6 +19,14 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html')
+      },
+      output: {
+        assetFileNames: (assetInfo) => {
+          if (/\.(png|jpe?g|gif|svg|webp)$/.test(assetInfo.name)) {
+            return `assets/img/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        },
       }
     }
   },
