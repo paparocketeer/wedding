@@ -28,7 +28,7 @@ const slides = [
       return (
         <div className="relative w-full h-full overflow-hidden">
           
-          {/* <img src="/assets/img/1.png" alt="Background" className="w-full h-full object-cover absolute top-0 left-0" /> */}
+          <img src="/assets/img/1.png" alt="Background" className="w-full h-full object-cover absolute top-0 left-0" />
           <span className="text-[48px] font-kaliningrad text-slate-900 mb-3 drop-shadow-lg flex justify-center items-center mt-[300px]">Добро пожаловать</span>
           <span className="text-[32px] font-felidae text-slate-900 mb-3 drop-shadow-lg flex justify-center items-center">Привет всем ребят ребят парни парни</span>
           <span className="text-[64px] font-laudatio text-slate-900 mb-3 drop-shadow-lg flex justify-center items-center mt-[400px]">Добро пожаловать</span>
