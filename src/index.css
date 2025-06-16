@@ -71,66 +71,60 @@ button:focus-visible {
   }
 }
 
-#root {
-  background-color: #000;
-}
-
 .stories-container {
   overflow: hidden;
 }
 
 .stories-container > div {
   margin: 0 auto;
-  width: 50vw !important;
+  width: 100% !important;
+  max-width: max-content !important;
   height: 100vh !important;
   /* background-color: #f4f1ec !important; */
 }
 
 /* Mac Retina Displays */
-@media (-webkit-min-device-pixel-ratio: 2), 
+/* @media (-webkit-min-device-pixel-ratio: 2), 
        (min-resolution: 192dpi) {
   .stories-container > div {
     width: 500px !important;
   }
-}
+} */
 
 /* MacBook Pro 13" Retina */
-@media screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+/* @media screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
   .stories-container > div {
     width: 550px !important;
   }
-}
+} */
 
 /* MacBook Pro 15" Retina */
-@media screen and (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2) {
+/* @media screen and (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2) {
   .stories-container > div {
     width: 600px !important;
   }
-}
+} */
 
 /* Full HD (1920x1080) */
-@media screen and (min-width: 1920px) {
+/* @media screen and (min-width: 1920px) {
   .stories-container > div {
     width: 607px !important;
-    /* max-width: 800px !important; */
   }
-}
+} */
 
 /* 2K (2560x1440) */
-@media screen and (min-width: 2560px) {
+/* @media screen and (min-width: 2560px) {
   .stories-container > div {
     width: 725px !important;
-    /* max-width: 1000px !important; */
   }
-}
+} */
 
 /* 4K (3840x2160) */
-@media screen and (min-width: 3840px) {
+/* @media screen and (min-width: 3840px) {
   .stories-container > div {
     width: 25vw !important;
-    /* max-width: 1200px !important; */
   }
-}
+} */
 
 @media (max-width: 768px) {
   .stories-container > div {
