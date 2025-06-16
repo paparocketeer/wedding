@@ -63,13 +63,13 @@ const slides = [
     },
     seeMoreCollapsed: ({ toggleMore }) => (
       
-      <div className="flex flex-col items-center justify-center">
-        <p className="text-center text-md text-black font-felidae">
-        Если не особо понимаешь что такое этот ваш БОХО, то тебе
+      <div className="mb-[60px] flex flex-col items-center justify-center">
+        <p className="text-center text-md text-black font-proxima">
+        Если не особо понимаешь что такое БОХО, то тебе
         </p>
-        <span className="inline-block text-center text-md cursor-pointer text-black font-felidae underline" onClick={() => toggleMore(true)}>
+        <span className="inline-block text-center text-md cursor-pointer text-black font-proxima underline" onClick={() => toggleMore(true)}>
         сюда
-      </span>
+        </span>
       </div>
     ),
     seeMore: ({ close }) => (
@@ -78,7 +78,6 @@ const slides = [
             direction="vertical"
             slidesPerView={1}
             mousewheel={true}
-            allowTouchMove={true}
             touchRatio={1}
             touchAngle={90}
             resistance={true}
@@ -102,7 +101,7 @@ const slides = [
             }}
           >
             <SwiperSlide>
-              <div className="w-full h-full">
+              <div className="w-full h-full pointer-events-none">
                 <img 
                   src="/assets/img/boho/boho1.jpg" 
                   alt="Boho Style 1" 
@@ -111,7 +110,7 @@ const slides = [
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full h-full">
+              <div className="w-full h-full pointer-events-none">
                 <img 
                   src="/assets/img/boho/boho2.jpg" 
                   alt="Boho Style 2" 
@@ -120,7 +119,7 @@ const slides = [
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-full h-full">
+              <div className="w-full h-full pointer-events-none">
                 <img 
                   src="/assets/img/boho/boho3.jpg" 
                   alt="Boho Style 3" 
