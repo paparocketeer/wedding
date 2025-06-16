@@ -46,7 +46,7 @@ class App extends React.Component {
           width={'inherit'}
           height={'100vh'}
           keyboardNavigation
-          defaultInterval={6000000}
+          defaultInterval={6000}
           stories={slides}
           onAllStoriesEnd={() => {}}
           onStoryStart={() => {}}
@@ -70,27 +70,44 @@ class App extends React.Component {
 }
 
 const slides = [
+
   {
 		url: '/assets/img/1.png',
 	},
   {
-    url: '/assets/img/2.png',
+		url: '/assets/img/2.png',
+	},
+  {
+    url: '/assets/img/3.png',
+  },
+  {
+    url: '/assets/img/4.png',
+  },
+  {
+    url: '/assets/img/5.png',
+  },
+    {
+    url: '/assets/img/6.png',
     seeMoreCollapsed: ({ toggleMore }) => (
-      <div className="mb-[120px] flex flex-col items-center justify-center">
-        <p className="text-center text-md text-black font-proxima">
-        Если не особо понимаешь что такое БОХО, то тебе
-        </p>
-        <span className="inline-block text-center text-md cursor-pointer text-black font-proxima underline" onClick={() => toggleMore(true)}>
-        сюда
+      <div className="mb-[50px] flex flex-col items-center justify-center">
+        <span className="inline-block text-center text-xl cursor-pointer text-black font-kaliningrad border-2 border-black rounded-md px-4 py-2" onClick={() => toggleMore(true)}>
+        ЛУКБУК
         </span>
       </div>
     ),
     seeMore: ({ close }) => (
-      <div className="w-full h-full p-6 bg-white">
+      <div className="w-full h-full p-6 bg-black">
+        <p className="cursor-pointer text-white mt-4 flex items-center gap-2 hover:text-gray-300 transition-colors" onClick={close}>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          НАЗАД
+        </p>
         <Swiper
             direction="vertical"
             slidesPerView={1}
             mousewheel={true}
+            allowTouchMove={true}
             touchRatio={1}
             touchAngle={90}
             resistance={true}
@@ -111,8 +128,40 @@ const slides = [
             className="h-full relative"
             onSlideChange={(swiper) => {
               swiper.allowTouchMove = true;
+              // Update button visibility
+              const upButton = document.querySelector('.swiper-tip-up');
+              const downButton = document.querySelector('.swiper-tip-down');
+              if (upButton) upButton.style.display = swiper.isBeginning ? 'none' : 'flex';
+              if (downButton) downButton.style.display = swiper.isEnd ? 'none' : 'flex';
             }}
           >
+            <div 
+              className="swiper-tip-up absolute top-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 bg-black/30 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-black/50 transition-all"
+              onClick={(e) => {
+                e.stopPropagation();
+                const swiper = e.currentTarget.closest('.swiper').swiper;
+                swiper.slidePrev();
+              }}
+              style={{ display: 'none' }} // Initially hidden
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+              </svg>
+              <span className="text-sm font-medium">ВВЕРХ</span>
+            </div>
+            <div 
+              className="swiper-tip-down absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 bg-black/30 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-black/50 transition-all"
+              onClick={(e) => {
+                e.stopPropagation();
+                const swiper = e.currentTarget.closest('.swiper').swiper;
+                swiper.slideNext();
+              }}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+              <span className="text-sm font-medium">ВНИЗ</span>
+            </div>
             <SwiperSlide>
               <div className="w-full h-full pointer-events-none">
                 <img 
@@ -141,24 +190,10 @@ const slides = [
               </div>
             </SwiperSlide>
           </Swiper>
-        <p className="underline cursor-pointer text-black" onClick={close}>
-          Back to story
-        </p>
+        
       </div>
     ),
     preload: true
-  },
-  {
-    url: '/assets/img/3.png',
-  },
-  {
-    url: '/assets/img/4.png',
-  },
-  {
-    url: '/assets/img/5.png',
-  },
-  {
-    url: '/assets/img/6.png',
   },
   {
     url: '/assets/img/7.png',
