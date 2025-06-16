@@ -24,11 +24,6 @@ const imagesToPrefetch = [
   '/assets/img/boho/boho3.jpg',
 ];
 
-// Function to check if device is mobile
-const isMobileDevice = () => {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
-};
-
 // Function to prefetch images
 const prefetchImages = (urls) => {
   urls.forEach(url => {
@@ -39,11 +34,8 @@ const prefetchImages = (urls) => {
 
 class App extends React.Component {
   componentDidMount() {
-    // Prefetch images only on mobile devices
-    if (isMobileDevice()) {
-      console.log('Mobile device detected, prefetching images...');
-      prefetchImages(imagesToPrefetch);
-    }
+    // Prefetch all images when component mounts
+    prefetchImages(imagesToPrefetch);
   }
 
   render() {
