@@ -82,12 +82,25 @@ button:focus-visible {
   /* background-color: #f4f1ec !important; */
 }
 
-@media (max-width: 768px) {
+/* Mac Retina Displays */
+@media (-webkit-min-device-pixel-ratio: 2), 
+       (min-resolution: 192dpi) {
   .stories-container > div {
-    margin-left: unset;
-    width: 100vw !important;
-    height: 100dvh !important;
-    background-color: #000;
+    width: 500px !important;
+  }
+}
+
+/* MacBook Pro 13" Retina */
+@media screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+  .stories-container > div {
+    width: 550px !important;
+  }
+}
+
+/* MacBook Pro 15" Retina */
+@media screen and (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2) {
+  .stories-container > div {
+    width: 600px !important;
   }
 }
 
@@ -112,6 +125,15 @@ button:focus-visible {
   .stories-container > div {
     width: 25vw !important;
     /* max-width: 1200px !important; */
+  }
+}
+
+@media (max-width: 768px) {
+  .stories-container > div {
+    margin-left: unset;
+    width: 100vw !important;
+    height: 100dvh !important;
+    background-color: #000;
   }
 }
 
