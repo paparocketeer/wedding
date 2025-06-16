@@ -8,7 +8,6 @@ import { Mousewheel, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { div } from "motion/react-client";
 
 class App extends React.Component {
   render() {
