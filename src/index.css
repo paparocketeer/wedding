@@ -71,6 +71,10 @@ button:focus-visible {
   }
 }
 
+#root {
+  background-color: #000;
+}
+
 .stories-container {
   overflow: hidden;
 }
