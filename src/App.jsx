@@ -2,14 +2,42 @@ import React from "react";
 import Stories, { WithSeeMore } from "react-insta-stories";
 import { TextAnimate } from "./text-animate.tsx";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Mousewheel, Pagination, Navigation } from 'swiper/modules';
+import { Mousewheel, Pagination } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+
+// List of all images to prefetch
+const imagesToPrefetch = [
+  '/assets/img/1.png',
+  '/assets/img/2.png',
+  '/assets/img/3.png',
+  '/assets/img/4.png',
+  '/assets/img/5.png',
+  '/assets/img/6.png',
+  '/assets/img/7.png',
+  '/assets/img/8.png',
+  '/assets/img/9.png',
+  '/assets/img/boho/boho1.jpg',
+  '/assets/img/boho/boho2.jpg',
+  '/assets/img/boho/boho3.jpg',
+];
+
+// Function to prefetch images
+const prefetchImages = (urls) => {
+  urls.forEach(url => {
+    const img = new Image();
+    img.src = url;
+  });
+};
 
 class App extends React.Component {
+  componentDidMount() {
+    // Prefetch all images when component mounts
+    prefetchImages(imagesToPrefetch);
+  }
+
   render() {
     return (
       <div className="stories-container">
