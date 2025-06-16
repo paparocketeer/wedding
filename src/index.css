@@ -77,14 +77,10 @@ button:focus-visible {
 
 .stories-container > div {
   margin: 0 auto;
-  width: 40vw !important;
+  width: 50vw !important;
   height: 100vh !important;
   /* background-color: #f4f1ec !important; */
 }
-
-/* .stories-container > div div { */
-  /* padding: 0 !important; */
-/* } */
 
 @media (max-width: 768px) {
   .stories-container > div {
@@ -94,5 +90,31 @@ button:focus-visible {
     background-color: #000;
   }
 }
+
+/* Full HD (1920x1080) */
+@media screen and (min-width: 1920px) {
+  .stories-container > div {
+    width: 607px !important;
+    /* max-width: 800px !important; */
+  }
+}
+
+/* 2K (2560x1440) */
+@media screen and (min-width: 2560px) {
+  .stories-container > div {
+    width: 725px !important;
+    /* max-width: 1000px !important; */
+  }
+}
+
+/* 4K (3840x2160) */
+@media screen and (min-width: 3840px) {
+  .stories-container > div {
+    width: 25vw !important;
+    /* max-width: 1200px !important; */
+  }
+}
+
+
 
 
