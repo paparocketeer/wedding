@@ -76,21 +76,21 @@ button:focus-visible {
 }
 
 .stories-container > div {
-  margin-left: 25%;
-  width: 50vw !important;
+  margin: 0 auto;
+  width: 40vw !important;
   height: 100vh !important;
-  background-color: #000;
+  /* background-color: #f4f1ec !important; */
 }
 
-.stories-container > div div {
+/* .stories-container > div div { */
   /* padding: 0 !important; */
-}
+/* } */
 
 @media (max-width: 768px) {
   .stories-container > div {
     margin-left: unset;
     width: 100vw !important;
-    height: 100vh !important;
+    height: 100dvh !important;
     background-color: #000;
   }
 }
