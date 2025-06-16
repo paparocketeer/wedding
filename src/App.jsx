@@ -51,12 +51,7 @@ class App extends React.Component {
           onAllStoriesEnd={() => {}}
           onStoryStart={() => {}}
           onStoryEnd={() => {}}
-          onNext={() => {
-            console.log('story next');
-          }}
-          onPrevious={() => {
-            console.log('story prev');
-          }}
+          preload={true}
           storyStyles={{
             width: 'auto',
             maxWidth: '100vw',
@@ -86,7 +81,7 @@ const slides = [
   {
     url: '/assets/img/5.png',
   },
-    {
+  {
     url: '/assets/img/6.png',
     seeMoreCollapsed: ({ toggleMore }) => (
       <div className="mb-[50px] flex flex-col items-center justify-center">
@@ -197,12 +192,6 @@ const slides = [
   },
   {
     url: '/assets/img/7.png',
-  },
-  {
-    url: '/assets/img/8.png',
-  },
-  {
-    url: '/assets/img/9.png',
   },
  ];
 
