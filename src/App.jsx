@@ -1,6 +1,14 @@
 import React from "react";
 import Stories, { WithSeeMore } from "react-insta-stories";
 import { TextAnimate } from "./text-animate.tsx";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Mousewheel, Pagination, Navigation } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { div } from "motion/react-client";
 
 class App extends React.Component {
   render() {
@@ -13,9 +21,15 @@ class App extends React.Component {
           keyboardNavigation
           defaultInterval={6000}
           stories={slides}
-          // onStoryEnd={(s, st) => console.log("story ended", s, st)}
-          // onAllStoriesEnd={(s, st) => console.log("all stories ended", s, st)}
-          // onStoryStart={(s, st) => console.log("story started", s, st)}
+          onAllStoriesEnd={() => {}}
+          onStoryStart={() => {}}
+          onStoryEnd={() => {}}
+          onNext={() => {
+            console.log('story next');
+          }}
+          onPrevious={() => {
+            console.log('story prev');
+          }}
         />
       </div>
     );
@@ -36,16 +50,91 @@ const slides = [
         </div>
       );
     },
-    preload: true
+    preload: true,
   },
   {
-    content: () => {
+    content: ({ action, story }) => {
       return (
-        <div className="relative w-full h-full overflow-hidden">
+        <WithSeeMore story={story} action={action}>
+          <div className="relative w-full h-full overflow-hidden">
           <img src="/assets/img/2.png" alt="Background" className="w-full h-full object-cover" />
         </div>
+        </WithSeeMore>
       );
     },
+    seeMoreCollapsed: ({ toggleMore }) => (
+      
+      <div className="flex flex-col items-center justify-center">
+        <p className="text-center text-md text-black font-felidae">
+        Если не особо понимаешь что такое этот ваш БОХО, то тебе
+        </p>
+        <span className="inline-block text-center text-md cursor-pointer text-black font-felidae underline" onClick={() => toggleMore(true)}>
+        сюда
+      </span>
+      </div>
+    ),
+    seeMore: ({ close }) => (
+      <div className="w-full h-full p-6 bg-white">
+        <Swiper
+            direction="vertical"
+            slidesPerView={1}
+            mousewheel={true}
+            allowTouchMove={true}
+            touchRatio={1}
+            touchAngle={90}
+            resistance={true}
+            resistanceRatio={0.85}
+            speed={400}
+            threshold={20}
+            shortSwipes={true}
+            longSwipes={true}
+            followFinger={true}
+            grabCursor={true}
+            touchStartPreventDefault={false}
+            touchMoveStopPropagation={true}
+            pagination={{
+              clickable: false,
+              type: 'bullets',
+            }}
+            modules={[Mousewheel, Pagination]}
+            className="h-full relative"
+            onSlideChange={(swiper) => {
+              swiper.allowTouchMove = true;
+            }}
+          >
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <img 
+                  src="/assets/img/boho/boho1.jpg" 
+                  alt="Boho Style 1" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <img 
+                  src="/assets/img/boho/boho2.jpg" 
+                  alt="Boho Style 2" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full">
+                <img 
+                  src="/assets/img/boho/boho3.jpg" 
+                  alt="Boho Style 3" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        <p className="underline cursor-pointer text-black" onClick={close}>
+          Back to story
+        </p>
+      </div>
+    ),
     preload: true
   },
   {
@@ -171,34 +260,7 @@ const slides = [
   //     );
   //   }
   // },
-  // {
-  //   content: ({ action, story }) => {
-  //     return (
-  //       <WithSeeMore story={story} action={action}>
-  //         <div className="bg-pink-300 p-5 h-full">
-  //           <h1 className="mt-[100%] mb-0 text-3xl">🌝</h1>
-  //           <h1 className="mt-2 text-2xl">
-  //             Join us on our special day
-  //           </h1>
-  //         </div>
-  //       </WithSeeMore>
-  //     );
-  //   },
-  //   seeMoreCollapsed: ({ toggleMore }) => (
-  //     <p className="text-center text-sm relative bottom-5" onClick={() => toggleMore(true)}>
-  //       See details →
-  //     </p>
-  //   ),
-  //   seeMore: ({ close }) => (
-  //     <div className="w-full h-full p-10 bg-white">
-  //       <h2 className="text-2xl mb-4">Wedding Details</h2>
-  //       <p className="underline cursor-pointer" onClick={close}>
-  //         Back to story
-  //       </p>
-  //     </div>
-  //   ),
-  //   duration: 1000
-  // },
+  
   // {
   //   content: () => {
   //     return (
