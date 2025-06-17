@@ -17,8 +17,6 @@ const imagesToPrefetch = [
   '/assets/img/5.png',
   '/assets/img/6.png',
   '/assets/img/7.png',
-  '/assets/img/8.png',
-  '/assets/img/9.png',
   '/assets/img/boho/boho1.jpg',
   '/assets/img/boho/boho2.jpg',
   '/assets/img/boho/boho3.jpg',
@@ -92,11 +90,11 @@ const slides = [
     ),
     seeMore: ({ close }) => (
       <div className="w-full h-full p-6 bg-black">
-        <p className="cursor-pointer text-white mt-4 flex items-center gap-2 hover:text-gray-300 transition-colors" onClick={close}>
+        <p className="cursor-pointer text-white mt-4 flex items-center gap-2 hover:text-gray-300 transition-colors uppercase" onClick={close}>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-          НАЗАД
+          назад
         </p>
         <Swiper
             direction="vertical"
@@ -142,7 +140,7 @@ const slides = [
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
               </svg>
-              <span className="text-sm font-medium">ВВЕРХ</span>
+              <span className="text-sm font-medium uppercase">вверх</span>
             </div>
             <div 
               className="swiper-tip-down absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 bg-black/30 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-black/50 transition-all"
@@ -155,7 +153,7 @@ const slides = [
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
-              <span className="text-sm font-medium">ВНИЗ</span>
+              <span className="text-sm font-medium uppercase">вниз</span>
             </div>
             <SwiperSlide>
               <div className="w-full h-full pointer-events-none">
