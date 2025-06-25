@@ -76,7 +76,7 @@ const slides = [
   {
     url: '/assets/img/3.png',
     seeMoreCollapsed: () => (
-      <div className="pt-4 pb-4 flex flex-col items-center justify-center">
+      <div className="pt-4 pb-8 flex flex-col items-center justify-center">
         <span className="inline-block text-center text-xl cursor-pointer text-black font-tuffybold border-2 border-black rounded-md px-4 py-2" onClick={handleOpenMap}>
         КАРТА
         </span>
@@ -87,7 +87,7 @@ const slides = [
   {
     url: '/assets/img/4.png',
     seeMoreCollapsed: () => (
-       <div className="pt-4 pb-4 flex flex-col items-center justify-center">
+       <div className="pt-4 pb-8 flex flex-col items-center justify-center">
          <a 
            href="https://instagram.com/asgard_hotel" 
            target="_blank" 
@@ -106,7 +106,7 @@ const slides = [
   {
     url: '/assets/img/6.png',
     seeMoreCollapsed: ({ toggleMore }) => (
-      <div className="pt-4 pb-4 flex flex-col items-center justify-center">
+      <div className="pt-4 pb-8 flex flex-col items-center justify-center">
         <span className="inline-block text-center text-xl cursor-pointer text-black font-tuffybold border-2 border-black rounded-md px-4 py-2" onClick={() => toggleMore(true)}>
         ЛУКБУК
         </span>
