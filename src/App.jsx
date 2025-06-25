@@ -44,7 +44,7 @@ class App extends React.Component {
           width={'inherit'}
           height={'100vh'}
           keyboardNavigation
-          defaultInterval={6000}
+          defaultInterval={6000000}
           stories={slides}
           onAllStoriesEnd={() => {}}
           onStoryStart={() => {}}
@@ -82,15 +82,15 @@ const slides = [
   {
     url: '/assets/img/6.png',
     seeMoreCollapsed: ({ toggleMore }) => (
-      <div className="mb-[50px] flex flex-col items-center justify-center">
-        <span className="inline-block text-center text-xl cursor-pointer text-black font-kaliningrad border-2 border-black rounded-md px-4 py-2" onClick={() => toggleMore(true)}>
+      <div className="pt-4 pb-6 flex flex-col items-center justify-center">
+        <span className="inline-block text-center text-xl cursor-pointer text-black font-tuffybold border-2 border-black rounded-md px-4 py-2" onClick={() => toggleMore(true)}>
         ЛУКБУК
         </span>
       </div>
     ),
     seeMore: ({ close }) => (
       <div className="w-full h-full p-6 bg-black">
-        <p className="cursor-pointer text-white mt-4 flex items-center gap-2 hover:text-gray-300 transition-colors uppercase" onClick={close}>
+        <p className="cursor-pointer font-tuffy text-white mt-4 flex items-center gap-2 hover:text-gray-300 transition-colors uppercase" onClick={close}>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
@@ -140,7 +140,7 @@ const slides = [
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
               </svg>
-              <span className="text-sm font-medium uppercase">вверх</span>
+              <span className="text-sm font-medium uppercase font-tuffy">вверх</span>
             </div>
             <div 
               className="swiper-tip-down absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 bg-black/30 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-black/50 transition-all"
@@ -153,7 +153,7 @@ const slides = [
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
-              <span className="text-sm font-medium uppercase">вниз</span>
+              <span className="text-sm font-medium uppercase font-tuffy">вниз</span>
             </div>
             <SwiperSlide>
               <div className="w-full h-full pointer-events-none">
