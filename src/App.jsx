@@ -44,7 +44,7 @@ class App extends React.Component {
           width={'inherit'}
           height={'100vh'}
           keyboardNavigation
-          defaultInterval={6000000}
+          defaultInterval={6000}
           stories={slides}
           onAllStoriesEnd={() => {}}
           onStoryStart={() => {}}
@@ -62,8 +62,11 @@ class App extends React.Component {
   }
 }
 
-const slides = [
+const handleOpenMap = () => {
+  window.open('https://yandex.ru/maps/-/CHgAVWP5', '_blank', 'noopener,noreferrer');
+};
 
+const slides = [
   {
 		url: '/assets/img/1.png',
 	},
@@ -72,9 +75,30 @@ const slides = [
 	},
   {
     url: '/assets/img/3.png',
+    seeMoreCollapsed: () => (
+      <div className="pt-4 pb-4 flex flex-col items-center justify-center">
+        <span className="inline-block text-center text-xl cursor-pointer text-black font-tuffybold border-2 border-black rounded-md px-4 py-2" onClick={handleOpenMap}>
+        КАРТА
+        </span>
+      </div>
+    ),
+    seeMore: () => {},
   },
   {
     url: '/assets/img/4.png',
+    seeMoreCollapsed: () => (
+       <div className="pt-4 pb-4 flex flex-col items-center justify-center">
+         <a 
+           href="https://instagram.com/asgard_hotel" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           className="text-black hover:text-gray-700 transition-colors font-tuffybold text-xl"
+         >
+           @asgard_hotel
+         </a>
+       </div>
+     ),
+    seeMore: () => {},
   },
   {
     url: '/assets/img/5.png',
@@ -82,7 +106,7 @@ const slides = [
   {
     url: '/assets/img/6.png',
     seeMoreCollapsed: ({ toggleMore }) => (
-      <div className="pt-4 pb-6 flex flex-col items-center justify-center">
+      <div className="pt-4 pb-4 flex flex-col items-center justify-center">
         <span className="inline-block text-center text-xl cursor-pointer text-black font-tuffybold border-2 border-black rounded-md px-4 py-2" onClick={() => toggleMore(true)}>
         ЛУКБУК
         </span>
