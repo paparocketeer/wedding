@@ -44,7 +44,7 @@ class App extends React.Component {
           width={'inherit'}
           height={'100vh'}
           keyboardNavigation
-          defaultInterval={6000}
+          defaultInterval={6000000}
           stories={slides}
           onAllStoriesEnd={() => {}}
           onStoryStart={() => {}}
@@ -62,8 +62,12 @@ class App extends React.Component {
   }
 }
 
-const handleOpenMap = () => {
+const handleOpenAsgard = () => {
   window.open('https://yandex.ru/maps/-/CHgAVWP5', '_blank', 'noopener,noreferrer');
+};
+
+const handleOpenPalma = () => {
+  window.open('https://yandex.ru/maps/-/CHgIyJOr', '_blank', 'noopener,noreferrer');
 };
 
 const slides = [
@@ -76,28 +80,33 @@ const slides = [
   {
     url: '/assets/img/3.png',
     seeMoreCollapsed: () => (
-      <div className="pt-4 pb-8 flex flex-col items-center justify-center">
-        <span className="inline-block text-center text-xl cursor-pointer text-black font-tuffybold border-2 border-black rounded-md px-4 py-2" onClick={handleOpenMap}>
-        КАРТА
-        </span>
-      </div>
+      <button 
+        className="fixed top-1/2 -translate-y-1/2 right-0 bg-white/80 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-3 shadow-lg hover:shadow-xl"
+        onClick={handleOpenPalma}
+      >
+        <img 
+          src="/assets/img/cta.png" 
+          alt="Карта" 
+          className="w-8 h-8 object-contain"
+        />
+      </button>
     ),
     seeMore: () => {},
   },
   {
     url: '/assets/img/4.png',
     seeMoreCollapsed: () => (
-       <div className="pt-4 pb-8 flex flex-col items-center justify-center">
-         <a 
-           href="https://instagram.com/asgard_hotel" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           className="text-black hover:text-gray-700 transition-colors font-tuffybold text-xl"
-         >
-           @asgard_hotel
-         </a>
-       </div>
-     ),
+      <button 
+        className="fixed top-1/2 -translate-y-1/2 right-0 bg-white/80 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-3 shadow-lg hover:shadow-xl"
+        onClick={handleOpenAsgard}
+      >
+        <img 
+          src="/assets/img/cta.png" 
+          alt="Карта" 
+          className="w-8 h-8 object-contain"
+        />
+      </button>
+    ),
     seeMore: () => {},
   },
   {
@@ -106,11 +115,16 @@ const slides = [
   {
     url: '/assets/img/6.png',
     seeMoreCollapsed: ({ toggleMore }) => (
-      <div className="pt-4 pb-8 flex flex-col items-center justify-center">
-        <span className="inline-block text-center text-xl cursor-pointer text-black font-tuffybold border-2 border-black rounded-md px-4 py-2" onClick={() => toggleMore(true)}>
-        ЛУКБУК
-        </span>
-      </div>
+      <button 
+        className="fixed top-1/2 -translate-y-1/2 right-0 bg-white/80 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-3 shadow-lg hover:shadow-xl"
+        onClick={() => {toggleMore(true)}}
+      >
+        <img 
+          src="/assets/img/cta.png" 
+          alt="Карта" 
+          className="w-8 h-8 object-contain"
+        />
+      </button>
     ),
     seeMore: ({ close }) => (
       <div className="w-full h-full p-6 bg-black">
