@@ -81,7 +81,7 @@ const slides = [
     url: '/assets/img/3.png',
     seeMoreCollapsed: () => (
       <button 
-        className="fixed top-1/2 -translate-y-1/2 right-0 bg-white/80 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-3 shadow-lg hover:shadow-xl"
+        className="fixed top-1/2 -translate-y-1/2 right-0 bg-white/20 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-3 shadow-lg hover:shadow-xl"
         onClick={handleOpenPalma}
       >
         <img 
@@ -97,7 +97,7 @@ const slides = [
     url: '/assets/img/4.png',
     seeMoreCollapsed: () => (
       <button 
-        className="fixed top-1/2 -translate-y-1/2 right-0 bg-white/80 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-3 shadow-lg hover:shadow-xl"
+        className="fixed top-1/2 -translate-y-1/2 right-0 bg-white/20 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-3 shadow-lg hover:shadow-xl"
         onClick={handleOpenAsgard}
       >
         <img 
@@ -116,7 +116,7 @@ const slides = [
     url: '/assets/img/6.png',
     seeMoreCollapsed: ({ toggleMore }) => (
       <button 
-        className="fixed top-1/2 -translate-y-1/2 right-0 bg-white/80 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-3 shadow-lg hover:shadow-xl"
+        className="fixed top-1/2 -translate-y-1/2 right-0 bg-white/20 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-3 shadow-lg hover:shadow-xl"
         onClick={() => {toggleMore(true)}}
       >
         <img 
