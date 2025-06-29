@@ -49,7 +49,7 @@ class App extends React.Component {
           onAllStoriesEnd={() => {}}
           onStoryStart={() => {}}
           onStoryEnd={() => {}}
-          preload={true}
+          preload={false}
           storyStyles={{
             width: 'auto',
             maxWidth: '100vw',
@@ -71,6 +71,7 @@ const handleOpenPalma = () => {
 };
 
 const slides = [
+  
   {
 		url: '/assets/img/1.png',
 	},
@@ -81,13 +82,13 @@ const slides = [
     url: '/assets/img/3.png',
     seeMoreCollapsed: () => (
       <button 
-        className="fixed top-1/2 -translate-y-1/2 right-0 bg-white/20 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-3 shadow-lg hover:shadow-xl"
+        className="animate-bounce fixed top-[calc(50%-10px)] bg-white/10 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1 shadow-lg hover:shadow-xl"
         onClick={handleOpenPalma}
       >
         <img 
-          src="/assets/img/cta.png" 
+          src="/assets/svg/restaurant.png" 
           alt="Карта" 
-          className="w-8 h-8 object-contain"
+          className="w-6 h-6 object-contain"
         />
       </button>
     ),
@@ -95,32 +96,32 @@ const slides = [
   },
   {
     url: '/assets/img/4.png',
+  },
+  {
+    url: '/assets/img/5.png',
     seeMoreCollapsed: () => (
       <button 
-        className="fixed top-1/2 -translate-y-1/2 right-0 bg-white/20 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-3 shadow-lg hover:shadow-xl"
+        className="animate-bounce fixed top-[calc(50%-10px)] bg-white/10 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1 shadow-lg hover:shadow-xl"
         onClick={handleOpenAsgard}
       >
         <img 
-          src="/assets/img/cta.png" 
+          src="/assets/svg/hotel.png" 
           alt="Карта" 
           className="w-8 h-8 object-contain"
         />
       </button>
     ),
     seeMore: () => {},
-  },
-  {
-    url: '/assets/img/5.png',
-  },
+  },  
   {
     url: '/assets/img/6.png',
     seeMoreCollapsed: ({ toggleMore }) => (
       <button 
-        className="fixed top-1/2 -translate-y-1/2 right-0 bg-white/20 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-3 shadow-lg hover:shadow-xl"
+        className="animate-bounce fixed top-[calc(50%-10px)] bg-white/10 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1 shadow-lg hover:shadow-xl"
         onClick={() => {toggleMore(true)}}
       >
         <img 
-          src="/assets/img/cta.png" 
+          src="/assets/svg/clothes.png" 
           alt="Карта" 
           className="w-8 h-8 object-contain"
         />
@@ -220,11 +221,9 @@ const slides = [
                 />
               </div>
             </SwiperSlide>
-          </Swiper>
-        
+          </Swiper>        
       </div>
     ),
-    preload: true
   },
   {
     url: '/assets/img/7.png',
