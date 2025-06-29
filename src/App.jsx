@@ -17,9 +17,6 @@ const imagesToPrefetch = [
   '/assets/img/5.png',
   '/assets/img/6.png',
   '/assets/img/7.png',
-  '/assets/img/boho/boho1.jpg',
-  '/assets/img/boho/boho2.jpg',
-  '/assets/img/boho/boho3.jpg',
 ];
 
 // Function to prefetch images
@@ -44,7 +41,7 @@ class App extends React.Component {
           width={'inherit'}
           height={'100vh'}
           keyboardNavigation
-          defaultInterval={6000000}
+          defaultInterval={60000}
           stories={slides}
           onAllStoriesEnd={() => {}}
           onStoryStart={() => {}}
@@ -194,16 +191,31 @@ const slides = [
               </svg>
               <span className="text-sm font-medium uppercase font-tuffy">вниз</span>
             </div>
-            <SwiperSlide>
-              <div className="w-full h-full pointer-events-none">
-                <img 
-                  src="/assets/img/boho/boho1.jpg" 
-                  alt="Boho Style 1" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
+            {/* men */}
+            {[...Array(10)].map((_, index) => (
+              <SwiperSlide key={index}>
+                <div className="w-full h-full pointer-events-none">
+                  <img src={`/assets/img/lookbook/m/man-${index + 1}.jpg`} alt={`Boho Style ${index + 1}`} className="w-full h-full object-contain" />
+                </div>
+              </SwiperSlide>
+            ))}
+            {/* women */}
+            {[...Array(8)].map((_, index) => (
+              <SwiperSlide key={index}>
+                <div className="w-full h-full pointer-events-none">
+                  <img src={`/assets/img/lookbook/w/woman-${index + 1}.jpg`} alt={`Boho Style ${index + 1}`} className="w-full h-full object-contain" />
+                </div>
+              </SwiperSlide>
+            ))}
+            {/* pairs */}
+            {[...Array(5)].map((_, index) => (
+              <SwiperSlide key={index}>
+                <div className="w-full h-full pointer-events-none">
+                  <img src={`/assets/img/lookbook/p/pair-${index + 1}.jpg`} alt={`Boho Style ${index + 1}`} className="w-full h-full object-contain" />
+                </div>
+              </SwiperSlide>
+            ))}
+            {/* <SwiperSlide>
               <div className="w-full h-full pointer-events-none">
                 <img 
                   src="/assets/img/boho/boho2.jpg" 
@@ -220,7 +232,7 @@ const slides = [
                   className="w-full h-full object-contain"
                 />
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>        
       </div>
     ),
