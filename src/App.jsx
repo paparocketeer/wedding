@@ -8,53 +8,89 @@ import { Mousewheel, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-// List of all images to prefetch
-const imagesToPrefetch = [
-  '/assets/img/1.png',
-  '/assets/img/2.png',
-  '/assets/img/3.png',
-  '/assets/img/4.png',
-  '/assets/img/5.png',
-  '/assets/img/6.png',
-  '/assets/img/7.png',
-];
-
-// Function to prefetch images
-const prefetchImages = (urls) => {
-  urls.forEach(url => {
-    const img = new Image();
-    img.src = url;
-  });
-};
-
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true,
+    };
+  }
+
   componentDidMount() {
     // Prefetch all images when component mounts
-    prefetchImages(imagesToPrefetch);
+    const allImages = [
+      '/assets/img/1.png',
+      '/assets/img/2.png',
+      '/assets/img/3.png',
+      '/assets/img/4.png',
+      '/assets/img/5.png',
+      '/assets/img/6.png',
+      '/assets/img/7.png',
+      // men
+      ...[...Array(10)].map((_, i) => `/assets/img/lookbook/m/man-${i+1}.jpg`),
+      // women
+      ...[...Array(8)].map((_, i) => `/assets/img/lookbook/w/woman-${i+1}.jpg`),
+      // pairs
+      ...[...Array(5)].map((_, i) => `/assets/img/lookbook/p/pair-${i+1}.jpg`),
+    ];
+    let loaded = 0;
+    allImages.forEach(src => {
+      const img = new window.Image();
+      img.onload = img.onerror = () => {
+        loaded++;
+        if (loaded === allImages.length) {
+          this.setState({ loading: false });
+        }
+      };
+      img.src = src;
+    });
   }
 
   render() {
     return (
-      <div className="stories-container">
-        <Stories
-          loop
-          width={'inherit'}
-          height={'100vh'}
-          keyboardNavigation
-          defaultInterval={60000}
-          stories={slides}
-          onAllStoriesEnd={() => {}}
-          onStoryStart={() => {}}
-          onStoryEnd={() => {}}
-          preload={false}
-          storyStyles={{
-            width: 'auto',
-            maxWidth: '100vw',
-            maxHeight: '100vh',
-            margin: '0 auto'
-          }}
-        />
-      </div>
+      <>
+        {this.state.loading && (
+          <div style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            background: '#fff',
+            zIndex: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+            transition: 'opacity 0.4s',
+          }}>
+            <svg className="animate-spin" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" strokeOpacity="0.2" />
+              <path d="M12 2a10 10 0 0 1 10 10" />
+            </svg>
+          </div>
+        )}
+        <div className="stories-container" style={{ opacity: this.state.loading ? 0 : 1, transition: 'opacity 0.4s' }}>
+          <Stories
+            loop
+            width={'inherit'}
+            height={'100vh'}
+            keyboardNavigation
+            defaultInterval={60000}
+            stories={slides}
+            onAllStoriesEnd={() => {}}
+            onStoryStart={() => {}}
+            onStoryEnd={() => {}}
+            preload={false}
+            storyStyles={{
+              width: 'auto',
+              maxWidth: '100vw',
+              maxHeight: '100vh',
+              margin: '0 auto'
+            }}
+          />
+        </div>
+      </>
     );
   }
 }
