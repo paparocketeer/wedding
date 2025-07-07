@@ -26,12 +26,13 @@ class App extends React.Component {
       '/assets/img/5.png',
       '/assets/img/6.png',
       '/assets/img/7.png',
+      '/assets/img/8.png',
       // men
-      ...[...Array(10)].map((_, i) => `/assets/img/lookbook/m/man-${i+1}.jpg`),
+      // ...[...Array(10)].map((_, i) => `/assets/img/lookbook/m/man-${i+1}.jpg`),
       // women
-      ...[...Array(8)].map((_, i) => `/assets/img/lookbook/w/woman-${i+1}.jpg`),
-      // pairs
-      ...[...Array(5)].map((_, i) => `/assets/img/lookbook/p/pair-${i+1}.jpg`),
+      // ...[...Array(8)].map((_, i) => `/assets/img/lookbook/w/woman-${i+1}.jpg`),
+      // // pairs
+      // ...[...Array(5)].map((_, i) => `/assets/img/lookbook/p/pair-${i+1}.jpg`),
     ];
     let loaded = 0;
     allImages.forEach(src => {
@@ -103,6 +104,10 @@ const handleOpenPalma = () => {
   window.open('https://yandex.ru/maps/-/CHgIyJOr', '_blank', 'noopener,noreferrer');
 };
 
+const handleOpenTg = () => {
+  window.open('https://t.me/+nLBMJ9jesCtmNjEy', '_blank', 'noopener,noreferrer');
+};
+
 const slides = [
   
   {
@@ -115,7 +120,7 @@ const slides = [
     url: '/assets/img/3.png',
     seeMoreCollapsed: () => (
       <button 
-        className="animate-bounce fixed top-[calc(50%-10px)] bg-white/10 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1 shadow-lg hover:shadow-xl"
+        className="animate-bounce fixed top-[calc(50%-10px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
         onClick={handleOpenPalma}
       >
         <img 
@@ -134,7 +139,7 @@ const slides = [
     url: '/assets/img/5.png',
     seeMoreCollapsed: () => (
       <button 
-        className="animate-bounce fixed top-[calc(50%-10px)] bg-white/10 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1 shadow-lg hover:shadow-xl"
+        className="animate-bounce fixed top-[calc(50%-10px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
         onClick={handleOpenAsgard}
       >
         <img 
@@ -150,7 +155,7 @@ const slides = [
     url: '/assets/img/6.png',
     seeMoreCollapsed: ({ toggleMore }) => (
       <button 
-        className="animate-bounce fixed top-[calc(50%-10px)] bg-white/10 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1 shadow-lg hover:shadow-xl"
+        className="animate-bounce fixed top-[calc(50%-10px)] bg-white/10 backdrop-blur-sm transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
         onClick={() => {toggleMore(true)}}
       >
         <img 
@@ -275,6 +280,22 @@ const slides = [
   },
   {
     url: '/assets/img/7.png',
+    seeMoreCollapsed: () => (
+      <button 
+        className="animate-bounce fixed top-[calc(50%-10px)] left-1/2 bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
+        onClick={handleOpenTg}
+      >
+        <img 
+          src="/assets/svg/tg.png" 
+          alt="Карта" 
+          className="w-8 h-8 object-contain"
+        />
+      </button>
+    ),
+    seeMore: () => {},
+  },  
+  {
+    url: '/assets/img/8.png',
   },
  ];
 
