@@ -1,6 +1,5 @@
 import React from "react";
-import Stories, { WithSeeMore } from "react-insta-stories";
-import { TextAnimate } from "./text-animate.tsx";
+import Stories from "react-insta-stories";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Pagination } from 'swiper/modules';
 
@@ -27,12 +26,6 @@ class App extends React.Component {
       '/assets/img/6.png',
       '/assets/img/7.png',
       '/assets/img/8.png',
-      // men
-      // ...[...Array(10)].map((_, i) => `/assets/img/lookbook/m/man-${i+1}.jpg`),
-      // women
-      // ...[...Array(8)].map((_, i) => `/assets/img/lookbook/w/woman-${i+1}.jpg`),
-      // // pairs
-      // ...[...Array(5)].map((_, i) => `/assets/img/lookbook/p/pair-${i+1}.jpg`),
     ];
     let loaded = 0;
     allImages.forEach(src => {
@@ -82,7 +75,7 @@ class App extends React.Component {
             onAllStoriesEnd={() => {}}
             onStoryStart={() => {}}
             onStoryEnd={() => {}}
-            preload={false}
+            preload={true}
             storyStyles={{
               width: 'auto',
               maxWidth: '100vw',
@@ -264,7 +257,7 @@ const slides = [
     url: '/assets/img/7.png',
     seeMoreCollapsed: () => (
       <button 
-        className="animate-bounce fixed top-[calc(50%-10px)] left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
+        className="animate-bounce fixed top-[calc(50%-10px)] left-[calc(50%-10px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
         onClick={handleOpenTg}
       >
         <img 
