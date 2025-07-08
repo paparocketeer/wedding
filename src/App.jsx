@@ -256,24 +256,6 @@ const slides = [
                 </div>
               </SwiperSlide>
             ))}
-            {/* <SwiperSlide>
-              <div className="w-full h-full pointer-events-none">
-                <img 
-                  src="/assets/img/boho/boho2.jpg" 
-                  alt="Boho Style 2" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full h-full pointer-events-none">
-                <img 
-                  src="/assets/img/boho/boho3.jpg" 
-                  alt="Boho Style 3" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </SwiperSlide> */}
           </Swiper>        
       </div>
     ),
@@ -282,7 +264,7 @@ const slides = [
     url: '/assets/img/7.png',
     seeMoreCollapsed: () => (
       <button 
-        className="animate-bounce fixed top-[calc(50%-10px)] left-1/2 bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
+        className="animate-bounce fixed top-[calc(50%-10px)] left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
         onClick={handleOpenTg}
       >
         <img 
