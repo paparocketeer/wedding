@@ -89,16 +89,25 @@ class App extends React.Component {
   }
 }
 
+const openLink = (url) => {
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  if (isMobile) {
+    window.location.href = url;
+  } else {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
+};
+
 const handleOpenAsgard = () => {
-  window.open('https://yandex.ru/maps/-/CHgAVWP5', '_blank', 'noopener,noreferrer');
+  openLink('https://yandex.ru/maps/-/CHgAVWP5');
 };
 
 const handleOpenPalma = () => {
-  window.open('https://yandex.ru/maps/-/CHgIyJOr', '_blank', 'noopener,noreferrer');
+  openLink('https://yandex.ru/maps/-/CHgIyJOr');
 };
 
 const handleOpenTg = () => {
-  window.open('https://t.me/+ayk4fhLOpbNhYzcy', '_blank', 'noopener,noreferrer');
+  openLink('https://t.me/+ayk4fhLOpbNhYzcy');
 };
 
 const slides = [
