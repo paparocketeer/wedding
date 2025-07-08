@@ -98,7 +98,7 @@ const handleOpenPalma = () => {
 };
 
 const handleOpenTg = () => {
-  window.open('https://t.me/+nLBMJ9jesCtmNjEy', '_blank', 'noopener,noreferrer');
+  window.open('https://t.me/+ayk4fhLOpbNhYzcy', '_blank', 'noopener,noreferrer');
 };
 
 const slides = [
