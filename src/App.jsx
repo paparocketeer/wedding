@@ -113,13 +113,13 @@ const slides = [
     url: '/assets/img/3.png',
     seeMoreCollapsed: () => (
       <button 
-        className="animate-bounce fixed top-[calc(50%-16px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
+        className="animate-bounce fixed top-[calc(50%-12px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
         onClick={handleOpenPalma}
       >
         <img 
           src="/assets/svg/restaurant.png" 
           alt="Карта" 
-          className="w-8 h-8 object-contain"
+          className="w-6 h-6 object-contain"
         />
       </button>
     ),
@@ -132,13 +132,13 @@ const slides = [
     url: '/assets/img/5.png',
     seeMoreCollapsed: () => (
       <button 
-        className="animate-bounce fixed top-[calc(50%-16px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
+        className="animate-bounce fixed top-[calc(50%-12px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
         onClick={handleOpenAsgard}
       >
         <img 
           src="/assets/svg/hotel.png" 
           alt="Карта" 
-          className="w-8 h-8 object-contain"
+          className="w-6 h-6 object-contain"
         />
       </button>
     ),
@@ -148,13 +148,13 @@ const slides = [
     url: '/assets/img/6.png',
     seeMoreCollapsed: ({ toggleMore }) => (
       <button 
-        className="animate-bounce fixed top-[calc(50%-16px)] bg-white/10 backdrop-blur-sm transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
+        className="animate-bounce fixed top-[calc(50%-12px)] bg-white/10 backdrop-blur-sm transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
         onClick={() => {toggleMore(true)}}
       >
         <img 
           src="/assets/svg/clothes.png" 
           alt="Лукбук" 
-          className="w-8 h-8 object-contain"
+          className="w-6 h-6 object-contain"
         />
       </button>
     ),
@@ -257,13 +257,13 @@ const slides = [
     url: '/assets/img/7.png',
     seeMoreCollapsed: () => (
       <button 
-        className="animate-bounce fixed top-[calc(50%-16px)] left-[calc(50%-16px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
+        className="animate-bounce fixed top-[calc(50%-12px)] left-[calc(50%-12px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
         onClick={handleOpenTg}
       >
         <img 
           src="/assets/svg/tg.png" 
           alt="Телеграм" 
-          className="w-8 h-8 object-contain"
+          className="w-6 h-6 object-contain"
         />
       </button>
     ),
