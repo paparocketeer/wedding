@@ -113,7 +113,7 @@ const slides = [
     url: '/assets/img/3.png',
     seeMoreCollapsed: () => (
       <button 
-        className="animate-bounce fixed top-[calc(50%-12px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
+        className="animate-bounce fixed top-[calc(50%-17px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
         onClick={handleOpenPalma}
       >
         <img 
@@ -132,7 +132,7 @@ const slides = [
     url: '/assets/img/5.png',
     seeMoreCollapsed: () => (
       <button 
-        className="animate-bounce fixed top-[calc(50%-12px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
+        className="animate-bounce fixed top-[calc(50%-17px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
         onClick={handleOpenAsgard}
       >
         <img 
@@ -148,7 +148,7 @@ const slides = [
     url: '/assets/img/6.png',
     seeMoreCollapsed: ({ toggleMore }) => (
       <button 
-        className="animate-bounce fixed top-[calc(50%-12px)] bg-white/10 backdrop-blur-sm transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
+        className="animate-bounce fixed top-[calc(50%-17px)] bg-white/10 backdrop-blur-sm transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
         onClick={() => {toggleMore(true)}}
       >
         <img 
@@ -257,7 +257,7 @@ const slides = [
     url: '/assets/img/7.png',
     seeMoreCollapsed: () => (
       <button 
-        className="animate-bounce fixed top-[calc(50%-12px)] left-[calc(50%-12px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
+        className="animate-bounce fixed top-[calc(50%-17px)] left-[calc(50%-17px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
         onClick={handleOpenTg}
       >
         <img 
