@@ -111,7 +111,7 @@ const handleOpenTg = () => {
 };
 
 const slides = [
-  
+   
   {
 		url: '/assets/img/1.png',
 	},
@@ -121,16 +121,26 @@ const slides = [
   {
     url: '/assets/img/3.png',
     seeMoreCollapsed: () => (
+      <>
       <button 
-        className="animate-bounce fixed top-[calc(50%-17px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
+        className="fixed top-[calc(50%-17px)] bg-white/10 text-black font-tuffybold text-xl p-1"
         onClick={handleOpenPalma}
       >
         <img 
-          src="/assets/svg/restaurant.png" 
+          src="/assets/svg/placeholder.png" 
           alt="Карта" 
-          className="w-6 h-6 object-contain"
+          className="w-8 h-8 object-contain"
         />
       </button>
+      <div className="fixed top-[calc(50%+12px)] p-2 animate-bounce">
+        <img 
+          src="/assets/svg/touch.png" 
+          alt="Карта" 
+          className="w-8 h-8 object-contain"
+        />
+      </div>
+      
+      </>
     ),
     seeMore: () => {},
   },
@@ -140,32 +150,50 @@ const slides = [
   {
     url: '/assets/img/5.png',
     seeMoreCollapsed: () => (
+      <>
       <button 
-        className="animate-bounce fixed top-[calc(50%-17px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
+        className="fixed top-[calc(50%-17px)] bg-white/10 text-black font-tuffybold text-xl p-1"
         onClick={handleOpenAsgard}
       >
         <img 
-          src="/assets/svg/hotel.png" 
+          src="/assets/svg/placeholder.png" 
           alt="Карта" 
-          className="w-6 h-6 object-contain"
+          className="w-8 h-8 object-contain"
         />
       </button>
+      <div className="fixed top-[calc(50%+12px)] p-2 animate-bounce">
+        <img 
+          src="/assets/svg/touch.png" 
+          alt="Карта" 
+          className="w-8 h-8 object-contain"
+        />
+      </div>
+      </>
     ),
     seeMore: () => {},
   },  
   {
     url: '/assets/img/6.png',
     seeMoreCollapsed: ({ toggleMore }) => (
+      <>
       <button 
-        className="animate-bounce fixed top-[calc(50%-17px)] bg-white/10 backdrop-blur-sm transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
+        className="fixed top-[calc(50%-17px)] bg-white/10 text-black font-tuffybold text-xl p-1"
         onClick={() => {toggleMore(true)}}
       >
         <img 
-          src="/assets/svg/clothes.png" 
+          src="/assets/svg/sketch.png" 
           alt="Лукбук" 
-          className="w-6 h-6 object-contain"
+          className="w-8 h-8 object-contain"
         />
       </button>
+      <div className="fixed top-[calc(50%+12px)] p-2 animate-bounce">
+        <img 
+          src="/assets/svg/touch.png" 
+          alt="Карта" 
+          className="w-8 h-8 object-contain"
+        />
+      </div>
+      </>
     ),
     seeMore: ({ close }) => (
       <div className="w-full h-full p-6 bg-black">
@@ -265,16 +293,25 @@ const slides = [
   {
     url: '/assets/img/7.png',
     seeMoreCollapsed: () => (
+      <>
       <button 
-        className="animate-bounce fixed top-[calc(50%-17px)] left-[calc(50%-17px)] bg-white/10 backdrop-blur-sm  transition-all duration-300 text-black font-tuffybold text-xl rounded-full p-1"
+        className="fixed top-[calc(50%-17px)] left-[calc(50%-17px)] bg-white/10 text-black font-tuffybold text-xl p-1"
         onClick={handleOpenTg}
       >
         <img 
-          src="/assets/svg/tg.png" 
+          src="/assets/svg/telegram.png" 
           alt="Телеграм" 
-          className="w-6 h-6 object-contain"
+          className="w-8 h-8 object-contain"
         />
       </button>
+      <div className="fixed top-[calc(50%+12px)] p-2 animate-bounce transition-all duration-300 left-[calc(50%-17px)]">
+        <img 
+          src="/assets/svg/touch.png" 
+          alt="Карта" 
+          className="w-8 h-8 object-contain"
+        />
+      </div>
+      </>
     ),
     seeMore: () => {},
   },  
