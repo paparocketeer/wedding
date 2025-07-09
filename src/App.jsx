@@ -78,7 +78,7 @@ class App extends React.Component {
             preload={true}
             storyStyles={{
               width: 'auto',
-              maxWidth: '100vw',
+              maxWidth: '100%',
               maxHeight: '100vh',
               margin: '0 auto'
             }}
