@@ -92,13 +92,12 @@ class App extends React.Component {
 }
 
 const openLink = (url) => {
-  // const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  // if (isMobile) {
-  //   window.location.href = url;
-  // } else {
-  //   window.open(url, '_blank', 'noopener,noreferrer');
-  // }
-  window.open(url, '_blank', 'noopener,noreferrer');
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  if (isMobile) {
+    window.location.href = url;
+  } else {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
 };
 
 const handleOpenAsgard = () => {
