@@ -64,7 +64,7 @@ class App extends React.Component {
             </svg>
           </div>
         )}
-        <div className="stories-container" style={{ opacity: this.state.loading ? 0 : 1, transition: 'opacity 0.4s' }}>
+        <div className="stories-container w-full h-full flex justify-center items-center" style={{ opacity: this.state.loading ? 0 : 1, transition: 'opacity 0.4s' }}>
           <Stories
             loop
             width={'inherit'}
