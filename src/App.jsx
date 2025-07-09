@@ -80,7 +80,9 @@ class App extends React.Component {
               width: 'auto',
               maxWidth: '100%',
               maxHeight: '100vh',
-              margin: '0 auto'
+              margin: '0 auto',
+              objectFit: 'contain',
+              display: 'flex',
             }}
           />
         </div>
