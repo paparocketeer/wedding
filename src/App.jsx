@@ -123,7 +123,7 @@ const slides = [
     seeMoreCollapsed: () => (
       <>
       <button 
-        className="fixed top-[calc(50%-17px)] bg-white/10 text-black font-tuffybold text-xl p-1"
+        className="fixed top-[calc(50%-17px)] bg-transparent text-black font-tuffybold text-xl p-1"
         onClick={handleOpenPalma}
       >
         <img 
@@ -152,7 +152,7 @@ const slides = [
     seeMoreCollapsed: () => (
       <>
       <button 
-        className="fixed top-[calc(50%-17px)] bg-white/10 text-black font-tuffybold text-xl p-1"
+        className="fixed top-[calc(50%-17px)] bg-transparent text-black font-tuffybold text-xl p-1"
         onClick={handleOpenAsgard}
       >
         <img 
@@ -177,7 +177,7 @@ const slides = [
     seeMoreCollapsed: ({ toggleMore }) => (
       <>
       <button 
-        className="fixed top-[calc(50%-17px)] bg-white/10 text-black font-tuffybold text-xl p-1"
+        className="fixed top-[calc(50%-17px)] bg-transparent text-black font-tuffybold text-xl p-1"
         onClick={() => {toggleMore(true)}}
       >
         <img 
@@ -295,7 +295,7 @@ const slides = [
     seeMoreCollapsed: () => (
       <>
       <button 
-        className="fixed top-[calc(50%-17px)] left-[calc(50%-17px)] bg-white/10 text-black font-tuffybold text-xl p-1"
+        className="fixed top-[calc(50%-17px)] left-[calc(50%-21px)] bg-transparent text-black font-tuffybold text-xl p-1"
         onClick={handleOpenTg}
       >
         <img 
@@ -304,7 +304,7 @@ const slides = [
           className="w-8 h-8 object-contain"
         />
       </button>
-      <div className="fixed top-[calc(50%+12px)] p-2 animate-bounce transition-all duration-300 left-[calc(50%-17px)]">
+      <div className="fixed top-[calc(50%+12px)] p-2 animate-bounce transition-all duration-300 left-[calc(50%-21px)]">
         <img 
           src="/assets/svg/touch.png" 
           alt="Карта" 
