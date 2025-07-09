@@ -132,7 +132,7 @@ const slides = [
           className="w-8 h-8 object-contain"
         />
       </button>
-      <div className="fixed top-[calc(50%+12px)] p-2 animate-bounce" onClick={handleOpenPalma}>
+      <div className="fixed top-[calc(50%+12px)] p-2 animate-bounce cursor-pointer" onClick={handleOpenPalma}>
         <img 
           src="/assets/svg/touch.png" 
           alt="Карта" 
@@ -161,7 +161,7 @@ const slides = [
           className="w-8 h-8 object-contain"
         />
       </button>
-      <div className="fixed top-[calc(50%+12px)] p-2 animate-bounce" onClick={handleOpenAsgard}>
+      <div className="fixed top-[calc(50%+12px)] p-2 animate-bounce cursor-pointer" onClick={handleOpenAsgard}>
         <img 
           src="/assets/svg/touch.png" 
           alt="Карта" 
@@ -186,7 +186,7 @@ const slides = [
           className="w-8 h-8 object-contain"
         />
       </button>
-      <div className="fixed top-[calc(50%+12px)] p-2 animate-bounce" onClick={() => {toggleMore(true)}}>
+      <div className="fixed top-[calc(50%+12px)] p-2 animate-bounce cursor-pointer" onClick={() => {toggleMore(true)}}>
         <img 
           src="/assets/svg/touch.png" 
           alt="Карта" 
@@ -304,7 +304,7 @@ const slides = [
           className="w-8 h-8 object-contain"
         />
       </button>
-      <div className="fixed top-[calc(50%+12px)] p-2 animate-bounce transition-all duration-300 left-[calc(50%-21px)]" onClick={handleOpenTg}>
+      <div className="fixed top-[calc(50%+12px)] p-2 animate-bounce transition-all duration-300 left-[calc(50%-21px)] cursor-pointer" onClick={handleOpenTg}>
         <img 
           src="/assets/svg/touch.png" 
           alt="Карта" 
